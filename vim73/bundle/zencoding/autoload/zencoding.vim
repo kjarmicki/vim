@@ -1120,6 +1120,15 @@ let s:zen_settings = {
 \    'scss': {
 \        'extends': 'css',
 \    },
+\    'javascript': {
+\        'snippets': {
+\             'js:wrap': "(function(window) {\n"
+\             -"\t\"use strict\"\n"
+\             -"\t\n"
+\             -"\t${child}|\n"
+\             -";}(this));"
+\         }
+\    },
 \    'html': {
 \        'snippets': {
 \            'cc:ie6': "<!--[if lte IE 6]>\n\t${child}|\n<![endif]-->",
