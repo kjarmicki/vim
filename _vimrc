@@ -15,6 +15,8 @@ set ts=4
 set tabstop=4
 set shiftwidth=4
 
+set clipboard=unnamed
+
 set autochdir
 
 call pathogen#infect()
@@ -37,6 +39,8 @@ let g:neocomplcache_enable_smart_case = 1
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
 
+set clipboard=unnamed
+
 " sytastic next error
 map <C-e> :ll<CR>
 
@@ -49,7 +53,6 @@ set guioptions-=l  "remove left-hand scroll bar
 set gfn=Droid_Sans_Mono:h10:cANSI
 
 
-source $VIMRUNTIME/mswin.vim
 source $VIMRUNTIME/NERD_tree.vim 
 
 let g:NERDTreeShowBookmarks = 1
