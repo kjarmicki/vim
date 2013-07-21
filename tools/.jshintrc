@@ -22,7 +22,9 @@
 	"myApp",
 	"PIE",
 	"App",
-	"APP"
+	"APP",
+	"require",
+	"define"
     ],
 
 

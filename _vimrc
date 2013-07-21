@@ -19,6 +19,22 @@ set clipboard=unnamed
 
 set autochdir
 
+let s:indentMode = "tabs"
+
+function! SpaceIndent()
+	let s:indentMode = "spaces"
+	set et|retab
+endfunction
+
+function! TabIndent()
+	let s:indentMode = "tabs"
+	set noet|retab!
+endfunction
+
+function GetIndentMode()
+	echo s:indentMode
+endfunction
+
 call pathogen#infect()
 
 highlight CursorLine guibg=#dddddd
