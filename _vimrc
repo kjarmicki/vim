@@ -14,11 +14,19 @@ set cursorline
 set ts=4
 set tabstop=4
 set shiftwidth=4
-
-set clipboard=unnamed
-
 set autochdir
 
+call pathogen#infect()
+
+highlight CursorLine guibg=#dddddd
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+set completeopt=menuone,preview
+
+au BufNewFile,BufRead *.json set filetype=javascript
+
+" tab/space switch
 let s:indentMode = "tabs"
 
 function! SpaceIndent()
@@ -35,15 +43,6 @@ function GetIndentMode()
 	echo s:indentMode
 endfunction
 
-call pathogen#infect()
-
-highlight CursorLine guibg=#dddddd
-
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-set completeopt=menuone,preview
-
-au BufNewFile,BufRead *.json set filetype=javascript
 
 " neocomplete
 let g:neocomplcache_enable_at_startup = 1
