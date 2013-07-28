@@ -5,7 +5,7 @@ set nocp
 set bs=2
 set fileencodings=utf-8
 set encoding=utf8
-set smartindent
+set cindent
 set incsearch
 set ruler
 set hlsearch
@@ -21,6 +21,7 @@ call pathogen#infect()
 highlight CursorLine guibg=#dddddd
 
 filetype plugin on
+filetype indent on
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 
@@ -53,6 +54,8 @@ let g:neocomplcache_enable_smart_case = 1
 
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
+
+let delimitMate_expand_cr = 1
 
 set clipboard=unnamed
 
