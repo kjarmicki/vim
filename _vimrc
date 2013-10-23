@@ -55,8 +55,6 @@ let g:neocomplcache_enable_smart_case = 1
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
 
-let delimitMate_expand_cr = 1
-
 set clipboard=unnamed
 
 " sytastic next error
