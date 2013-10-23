@@ -57,6 +57,9 @@ let g:user_zen_expandabbr_key       = '<c-t>'
 
 set clipboard=unnamed
 
+map r "_d
+vmap r "_d
+
 " sytastic next error
 map <C-e> :ll<CR>
 
