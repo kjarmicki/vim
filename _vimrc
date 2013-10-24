@@ -54,9 +54,10 @@ let g:neocomplcache_enable_smart_case = 1
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
 
-let delimitMate_expand_cr = 1
-
 set clipboard=unnamed
+
+map r "_d
+vmap r "_d
 
 " sytastic next error
 map <C-e> :ll<CR>
