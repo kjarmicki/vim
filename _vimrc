@@ -44,7 +44,6 @@ function GetIndentMode()
 	echo s:indentMode
 endfunction
 
-
 " neocomplete
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
@@ -74,3 +73,5 @@ set gfn=Droid_Sans_Mono:h10:cANSI
 source $VIMRUNTIME/NERD_tree.vim 
 
 let g:NERDTreeShowBookmarks = 1
+
+call SpaceIndent()
