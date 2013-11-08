@@ -24,7 +24,8 @@
 	"App",
 	"APP",
 	"require",
-	"define"
+	"define",
+	"exports"
     ],
 
 

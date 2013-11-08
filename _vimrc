@@ -15,6 +15,7 @@ set ts=4
 set tabstop=4
 set shiftwidth=4
 set autochdir
+set paste
 
 call pathogen#infect()
 
@@ -26,6 +27,9 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 
 au BufNewFile,BufRead *.json set filetype=javascript
+
+"make star stay at current word
+:nmap <silent> * :let @/='\<'.expand('<cword>').'\>'<CR>
 
 " tab/space switch
 let s:indentMode = "tabs"
