@@ -11,7 +11,7 @@
 
 function! SyntaxCheckers_javascript_GetLocList()
     " node-jshint uses .jshintrc as config unless --config arg is present
-    let args = ' --config D:\Vim\tools\.jshintrc'
+    let args = ' --config "C:\Program Files (x86)\Vim\tools\.jshintrc"'
     let makeprg = 'jshint ' . shellescape(expand("%")) . args
     let errorformat = '%ELine %l:%c,%Z\\s%#Reason: %m,%C%.%#,%f: line %l\, col %c\, %m,%-G%.%#'
     return SyntasticMake({ 'makeprg': makeprg, 'errorformat': errorformat, 'defaults': {'bufnr': bufnr('')} })

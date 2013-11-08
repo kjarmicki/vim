@@ -27,6 +27,7 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 
 au BufNewFile,BufRead *.json set filetype=javascript
+autocmd BufWritePost *.coffee silent make!
 
 "make star stay at current word
 :nmap <silent> * :let @/='\<'.expand('<cword>').'\>'<CR>
@@ -48,13 +49,14 @@ function GetIndentMode()
 	echo s:indentMode
 endfunction
 
-
 " neocomplete
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_min_keyword_length = 2
 let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_enable_smart_case = 1
+
+let g:AutoPairsShortcutJump = ''
 
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
@@ -79,3 +81,5 @@ set gfn=Droid_Sans_Mono:h10:cANSI
 source $VIMRUNTIME/NERD_tree.vim 
 
 let g:NERDTreeShowBookmarks = 1
+
+call SpaceIndent()
