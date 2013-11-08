@@ -254,7 +254,7 @@ function! AutoPairsDelete()
 endfunction
 
 function! AutoPairsJump()
-  call search('["\]'')}]','W')
+  "call search('["\]'')}]','W')
 endfunction
 " string_chunk cannot use standalone
 let s:string_chunk = '\v%(\\\_.|[^\1]|[\r\n]){-}'

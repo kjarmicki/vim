@@ -26,6 +26,7 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,preview
 
 au BufNewFile,BufRead *.json set filetype=javascript
+autocmd BufWritePost *.coffee silent make!
 
 " tab/space switch
 let s:indentMode = "tabs"
@@ -50,6 +51,8 @@ let g:neocomplcache_enable_auto_select = 1
 let g:neocomplcache_min_keyword_length = 2
 let g:neocomplcache_min_syntax_length = 2
 let g:neocomplcache_enable_smart_case = 1
+
+let g:AutoPairsShortcutJump = ''
 
 " zencoding
 let g:user_zen_expandabbr_key       = '<c-t>'
