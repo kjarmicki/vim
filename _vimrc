@@ -68,6 +68,9 @@ imap <Home> <esc>^i
 map r "_d
 vmap r "_d
 
+" single keystroke indentation
+map > >l
+map < <l
 
 "" plugins
 call pathogen#infect()
