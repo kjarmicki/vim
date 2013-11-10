@@ -102,22 +102,22 @@ function! AutoPairsInsert(key)
       return "\<Right>"
     end
 
-    if !g:AutoPairsFlyMode
-      " Skip the character if next character is space
-      if current_char == ' ' && next_char == a:key
-        return "\<Right>\<Right>"
-      end
+    " if !g:AutoPairsFlyMode
+    "   " Skip the character if next character is space
+    "   if current_char == ' ' && next_char == a:key
+    "     return "\<Right>\<Right>"
+    "   end
 
-      " Skip the character if closed pair is next character
-      if current_char == ''
-        let next_lineno = line('.')+1
-        let next_line = getline(nextnonblank(next_lineno))
-        let next_char = matchstr(next_line, '\s*\zs.')
-        if next_char == a:key
-          return "\<ESC>e^a"
-        endif
-      endif
-    endif
+    "   " Skip the character if closed pair is next character
+    "   if current_char == ''
+    "     let next_lineno = line('.')+1
+    "     let next_line = getline(nextnonblank(next_lineno))
+    "     let next_char = matchstr(next_line, '\s*\zs.')
+    "     if next_char == a:key
+    "       return "\<ESC>e^a"
+    "     endif
+    "   endif
+    " endif
 
     " Fly Mode, and the key is closed-pairs, search closed-pair and jump
     if g:AutoPairsFlyMode && has_key(b:AutoPairsClosedPairs, a:key)
@@ -253,9 +253,6 @@ function! AutoPairsDelete()
   return "\<BS>"
 endfunction
 
-function! AutoPairsJump()
-  "call search('["\]'')}]','W')
-endfunction
 " string_chunk cannot use standalone
 let s:string_chunk = '\v%(\\\_.|[^\1]|[\r\n]){-}'
 let s:ss_pattern = '\v''' . s:string_chunk . ''''
@@ -439,11 +436,6 @@ function! AutoPairsInit()
     " use <expr> to ensure showing the status when toggle
     execute 'inoremap <buffer> <silent> <expr> '.g:AutoPairsShortcutToggle.' AutoPairsToggle()'
     execute 'noremap <buffer> <silent> '.g:AutoPairsShortcutToggle.' :call AutoPairsToggle()<CR>'
-  end
-
-  if g:AutoPairsShortcutJump != ''
-    execute 'inoremap <buffer> <silent> ' . g:AutoPairsShortcutJump. ' <ESC>:call AutoPairsJump()<CR>a'
-    execute 'noremap <buffer> <silent> ' . g:AutoPairsShortcutJump. ' :call AutoPairsJump()<CR>'
   end
 
 endfunction
