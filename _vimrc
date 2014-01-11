@@ -97,6 +97,9 @@ let g:user_zen_expandabbr_key = '<c-t>'
 
 " coffeescript
 autocmd BufWritePost *.coffee silent make!
+let coffee_compile_vert = 1
+let coffee_watch_vert = 1
+let coffee_run_vert = 1
 
 " sytastic next error
 map <C-e> :ll<CR>
