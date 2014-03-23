@@ -73,6 +73,9 @@ map > >l
 map < <l
 map = =l
 
+" single keystroke split change
+map <c-w> <c-w>w
+
 "" plugins
 call pathogen#infect()
 
@@ -107,6 +110,7 @@ map <C-e> :ll<CR>
 " NERDTree
 source $VIMRUNTIME/NERD_tree.vim 
 let g:NERDTreeShowBookmarks = 1
+let g:NERDTreeChDirMode = 1
 
 " custom extensions (machine-dependent stuff)
 if filereadable($VIM."/_extensions")
