@@ -123,7 +123,7 @@ syntax keyword javaScriptEventListenerMethods     scrollIntoView  addEventListen
 	"}}}
 	" HTML events and internal variables"{{{
 	syntax case ignore
-	syntax keyword javaScriptHtmlEvents     onblur onclick oncontextmenu ondblclick onfocus onkeydown onkeypress onkeyup onmousedown onmousemove onmouseout onmouseover onmouseup onresize onload onsubmit
+	syntax keyword javaScriptHtmlEvents     onblur onclick oncontextmenu ondblclick onerror onfocus onkeydown onkeypress onkeyup onmousedown onmousemove onmouseout onmouseover onmouseup onresize ontimeout onload onsubmit
 	syntax case match
 	"}}}
 
