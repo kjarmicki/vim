@@ -108,9 +108,12 @@ let coffee_run_vert = 1
 map <C-e> :ll<CR>
 
 " NERDTree
-source $VIMRUNTIME/NERD_tree.vim 
 let g:NERDTreeShowBookmarks = 1
 let g:NERDTreeChDirMode = 1
+
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPLastMode'
+let g:ctrlp_extensions = ['line', 'dir']
 
 " custom extensions (machine-dependent stuff)
 if filereadable($VIM."/_extensions")
