@@ -95,6 +95,9 @@ autocmd FileType php NeoComplCacheEnable
 autocmd FileType jsp NeoComplCacheEnable
 autocmd FileType java NeoComplCacheEnable
 
+" syntastic
+let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+
 " zencoding
 let g:user_zen_expandabbr_key = '<c-t>'
 
