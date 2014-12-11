@@ -33,6 +33,7 @@ set completeopt=menuone,preview
 
 " filetypes
 au BufNewFile,BufRead *.json set filetype=javascript
+au BufNewFile,BufRead *.hjs set filetype=html
 
 "make star stay at current word
 :nnoremap * *N
