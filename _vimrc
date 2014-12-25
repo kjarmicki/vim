@@ -97,6 +97,8 @@ autocmd FileType java NeoComplCacheEnable
 
 " syntastic
 let g:syntastic_javascript_checkers = ['jshint', 'jscs']
+let g:syntastic_always_populate_loc_list = 1
+map <C-e> :ll<CR>
 
 " zencoding
 let g:user_zen_expandabbr_key = '<c-t>'
@@ -106,9 +108,6 @@ autocmd BufWritePost *.coffee silent make!
 let coffee_compile_vert = 1
 let coffee_watch_vert = 1
 let coffee_run_vert = 1
-
-" sytastic next error
-map <C-e> :ll<CR>
 
 " NERDTree
 let g:NERDTreeShowBookmarks = 1
