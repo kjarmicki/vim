@@ -24,7 +24,10 @@ set clipboard=unnamed
 " GUI
 highlight CursorLine guibg=#dddddd
 set guioptions-=T  "remove toolbar
-set guioptions-=l  "remove left-hand scroll bar
+set guioptions-=l
+set guioptions-=r
+set guioptions-=L
+set guioptions-=R
 set gfn=Droid_Sans_Mono:h10:cANSI
 
 " autocompletion
